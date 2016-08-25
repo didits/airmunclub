@@ -26,3 +26,27 @@ Route::get('/contact', function () {
 Route::get('/int_mun', function () {
     return view('home/int_mun');
 });
+
+Route::get('/nat_mun',function(){
+	return view('home/nat_mun');
+});
+
+Route::get('/faq',function(){
+	return view('home/faq');
+});
+
+Route::get('/event_calendar',function(){
+	return view('home/event_calendar');
+});
+
+Route::get('/gallery',function(){
+	return view('home/gallery');
+});
+
+Route::get('/material',function(){
+	return view('home/material');
+});
+
+Route::get('/post',function(){
+	return view('home/post');
+});
