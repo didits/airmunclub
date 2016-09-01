@@ -15,24 +15,24 @@
                             <div class="uk-grid">
                                 <div class="uk-width-medium-5-10">
                                     <div class="uk-form-row">
-                                    <label class="uk-form-label" for="">Nama Depan</label>
-                                        <input name="email" type="text" style="width:100%;" placeholder="Nama Depan" required>
+                                    <label class="uk-form-label" for="">First Name</label>
+                                        <input name="email" type="text" style="width:100%;" placeholder="First Name" required>
                                     </div>
                                     <br>
                                     <div class="uk-form-row">
                                     <label class="uk-form-label" for="">Email</label>
-                                        <input name="password" type="text" style="width:100%;" placeholder="Email" required>
+                                        <input name="password" type="text" style="width:100%;" placeholder="Enter your Email" required>
                                     </div>
                                 </div>
                                 <div class="uk-width-medium-5-10">
                                     <div class="uk-form-row">
-                                    <label class="uk-form-label" for="">Nama Belakang</label>
-                                        <input name="email" type="email" style="width:100%;" placeholder="Nama Belakang" required>
+                                    <label class="uk-form-label" for="">Last Name</label>
+                                        <input name="email" type="email" style="width:100%;" placeholder="Last Email" required>
                                     </div>
                                     <br>
                                     <div class="uk-form-row">
-                                    <label class="uk-form-label" for="">No. Telephone</label>
-                                        <input name="password" type="text" style="width:100%;" placeholder="No. Telephone" required>
+                                    <label class="uk-form-label" for="">Phone Number</label>
+                                        <input name="password" type="text" style="width:100%;" placeholder="Phone Number" required>
                                     </div>
                                 </div>
                             </div>

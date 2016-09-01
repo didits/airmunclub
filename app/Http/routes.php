@@ -50,3 +50,19 @@ Route::get('/material',function(){
 Route::get('/post',function(){
 	return view('home/post');
 });
+
+Route::get('/view_material',function(){
+	return view('admin/view_material');
+});
+
+Route::get('/form_material',function(){
+	return view('admin/form_material');
+});
+
+Route::get('/form_member',function(){
+	return view('admin/form_member');
+});
+
+Route::get('/form_edit_material',function(){
+	return view('admin/edit_material');
+});

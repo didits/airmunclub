@@ -19,10 +19,10 @@
                     <a href="">Activities</a>
                 </li>
                 <li>
-                    <a href="">Archieve</a>
+                    <a href="">Archive</a>
                 </li>
                 <li>
-                    <a href="">Event Calender</a>
+                    <a href="">Events Calender</a>
                 </li>
                 <li>
                     <a href="">FAQ</a>

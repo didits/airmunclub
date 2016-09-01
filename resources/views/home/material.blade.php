@@ -14,7 +14,7 @@
                     <div class="uk-panel ">
                         <div class="uk-width-large-4-4 uk-text-center uk-margin-large">
                             <div class="uk-margin-bottom uk-margin-top">
-                                <h1 class="uk-heading-large uk-margin-large-top" style="color:#000">MATERIAL</h1>
+                                <h1 class="uk-heading-large uk-margin-large-top" style="color:#000">MATERIALS</h1>
                             </div>
                         </div>
                     </div>
