@@ -15,7 +15,7 @@
             </li>     
             <li class="site-menu-item">
               <a class="animsition-link" href="" data-slug="uikit-buttons">
-                <i class="site-menu-icon wb-user" aria-hidden="true"></i>
+                <i class="site-menu-icon wb-file" aria-hidden="true"></i>
                 <span class="site-menu-title">National MUN</span>
                 <!-- <span class="site-menu-arrow"></span> -->
               </a>            

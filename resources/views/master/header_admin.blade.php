@@ -7,7 +7,7 @@
   <meta name="description" content="bootstrap admin template">
   <meta name="author" content="">
 
-  <title>Arsip Pustekbang</title>
+  <title>Halaman Admin AIRMUNCLUB</title>
 
   <link rel="apple-touch-icon" href="{{URL::to('aset/images/apple-touch-icon.png')}}">
   <link rel="shortcut icon" href="{{URL::to('aset/images/favicon.ico')}}">
@@ -77,8 +77,8 @@ $(document).ready(function(){
         <i class="icon wb-more-horizontal" aria-hidden="true"></i>
       </button>      
       <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">        
-        <img class="navbar-brand-logo" src="{{URL::to('aset/images/logolapan.png')}}" width="50" length="50" alt="...">        
-        <span class="navbar-brand-text"> Pustekbang</span>
+        <img class="navbar-brand-logo" src="{{URL::to('assets/img/logo/1.png')}}" width="50" length="50" alt="...">        
+        <span class="navbar-brand-text">Air Mun Club </span>
       </div>
     </div>
 

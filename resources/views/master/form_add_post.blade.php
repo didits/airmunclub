@@ -7,9 +7,9 @@
  <!-- Panel Standard Editor -->
    <div class="panel">
             <div class="panel-heading">
-              <h3 class="panel-title">Artikel</h3>
+              <h4 class="example-title">Artikel</h4>
             </div>
-            <div class="panel-body">
+            <div >
               <div id="summernote" data-plugin="summernote">
                 <h2>WYSIWYG Editor</h2> Lorem ipsum dolor sit amet, consectetur adipiscing
                 elit. Aliquam ullamcorper sapien non nisl facilisis bibendum in

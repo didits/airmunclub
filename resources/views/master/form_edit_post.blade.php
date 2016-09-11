@@ -1,42 +1,15 @@
-@include('master.header_admin')
-@include('master.navbar_admin')
-
-
-  <!-- Page -->
-  
-    <div class="page-content">
-      <!-- Judul -->
-      <div class="page-header">
-        <h1 class="page-title">Edit Media Coverage</h1>
-        <div class="page-header-actions">
-         </div>
-      </div>
-<!-- end judul -->
-      <div class="panel">
-        <div class="panel-heading"> 
- <link rel="stylesheet" href="{{URL::to('aset/vendor/summernote/summernote.css')}}">
-<link rel="stylesheet" href="{{URL::to('aset/css/../fonts/font-awesome/font-awesome.css')}}">
-
-
-<body >
-                
-<!-- <div class="panel" style="padding:15px;">            -->
-            <div class="panel-body container-fluid" style="width:75%;">
-
-              <form autocomplete="off" method="post" action="" >
-                
                 <div >
                   <br>
                   <h4 class="example-title">Judul</h4>
-                  <input type="text" class="form-control" id="inputPlaceholder" placeholder="Judul" name="Judul" value="Lorem Ipsum">
+                  <input type="text" class="form-control" id="inputPlaceholder" placeholder="Judul" name="Judul" required="required" value="Lorem Ipsum">
                   <br>
                 </div>
  <!-- Panel Standard Editor -->
    <div class="panel">
             <div class="panel-heading">
-              <h3 class="panel-title">Artikel</h3>
+              <h4 class="example-title">Artikel</h4>
             </div>
-            <div class="panel-body">
+            <div >
               <div id="summernote" data-plugin="summernote">
                 <h2>WYSIWYG Editor</h2> Lorem ipsum dolor sit amet, consectetur adipiscing
                 elit. Aliquam ullamcorper sapien non nisl facilisis bibendum in
@@ -67,12 +40,11 @@
            
                 <div>
                   <h4 class="example-title">Author</h4>
-                  <input value="Lorem Ipsum" type="text" class="form-control" id="inputPlaceholder" placeholder="Author" name="Author" required="required">
+                  <input type="text" value="lorem ipsum" class="form-control" id="inputPlaceholder" placeholder="Author" name="Author" required="required">
                   <br>
                 </div>
                 
-              
-
+            
               <div style="text-align: center">
                    <br>
                    <button type="button submit" class="btn-primary btn">Submit</button>
