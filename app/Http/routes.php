@@ -32,6 +32,8 @@ $this->post('admin/register', 'Auth\AuthController@register');
 //USER
 Route::get('/home', 'HomeController@index');
 
+Route::get('/posting/{id}', 'HomeController@posting');
+
 Route::get('/', function () {
 	return view('home/index');
 });
@@ -75,7 +77,8 @@ Route::get('/post',function(){
 //ADMIN
 
 Route::group(['middleware' => 'auth','prefix' => 'admin'], function () {
-	Route::resource('article', 'ArticleMemberController');
+	Route::resource('article/member', 'ArticleMemberController');
+	Route::resource('article/media', 'ArticleMediaCoverageController');
 
 	Route::get('/view_material',function(){
 		return view('admin/view_material');

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request;
+use App\Article;
+use Illuminate\Support\Facades\View;
 
 class HomeController extends Controller
 {
@@ -12,10 +14,6 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     /**
      * Show the application dashboard.
@@ -26,4 +24,13 @@ class HomeController extends Controller
     {
         return view('home/index');
     }
+
+    public function posting($id)
+    {
+        $article=Article::where('id', $id)->first();
+        // load the view and pass the nerds
+        return View::make('home.post')
+            ->with('article', $article);
+    }
+
 }

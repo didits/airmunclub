@@ -28,14 +28,14 @@
               </a>            
             </li>     
                         <li class="site-menu-item">
-              <a class="animsition-link" href="" data-slug="uikit-buttons">
+              <a class="animsition-link" href="{{url('admin/article/member')}}" data-slug="uikit-buttons">
                 <i class="site-menu-icon wb-file" aria-hidden="true"></i>
                 <span class="site-menu-title">Member</span>
                 <!-- <span class="site-menu-arrow"></span> -->
               </a>            
             </li>     
                         <li class="site-menu-item">
-              <a class="animsition-link" href="" data-slug="uikit-buttons">
+              <a class="animsition-link" href="{{url('admin/article/media')}}" data-slug="uikit-buttons">
                 <i class="site-menu-icon wb-file" aria-hidden="true"></i>
                 <span class="site-menu-title">Media Coverage</span>
                 <!-- <span class="site-menu-arrow"></span> -->

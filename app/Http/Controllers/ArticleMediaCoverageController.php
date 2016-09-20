@@ -8,7 +8,7 @@ use App\Http\Requests;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Auth;
 
-class ArticleMemberController extends Controller
+class ArticleMediaCoverageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,10 +19,10 @@ class ArticleMemberController extends Controller
     {
         //
         // get all the nerds
-        $article = Article::where('type','member')->get();
+        $article = Article::where('type','media')->get();
 
         // load the view and pass the nerds
-        return View::make('admin.view_member')
+        return View::make('admin.view_media_coverage')
             ->with('article', $article);
     }
 
@@ -34,7 +34,7 @@ class ArticleMemberController extends Controller
     public function create()
     {
         //
-        return View::make('admin.form_member');
+        return View::make('admin.form_media_coverage');
     }
 
     /**
@@ -109,7 +109,7 @@ class ArticleMemberController extends Controller
             'id_author' => Auth::user()->id,
             'type' => $data['type']
         ));
-        return redirect('admin/article/member');
+        return redirect('admin/article/media');
 
     }
 
@@ -134,10 +134,10 @@ class ArticleMemberController extends Controller
     {
         //
         // get all the nerds
-        $article = Article::find($id)->first();
+        $article = Article::where('id',$id)->first();
 
         // load the view and pass the nerds
-        return View::make('admin.edit_member')
+        return View::make('admin.edit_media_coverage')
             ->with('article', $article);
 
     }
@@ -199,12 +199,12 @@ class ArticleMemberController extends Controller
         if ($uploadOk == 0) {
             echo "Sorry, your file was not uploaded.";
             // if everything is ok, try to upload file
-        Article::where('id', $id)->update(array(
-            'title' => $data['title'],
-            'description' => $data['description'],
-            'id_author' => Auth::user()->id,
-            'type' => $data['type']
-        ));
+            Article::where('id', $id)->update(array(
+                'title' => $data['title'],
+                'description' => $data['description'],
+                'id_author' => Auth::user()->id,
+                'type' => $data['type']
+            ));
         } else {
             if (move_uploaded_file($_FILES["path"]["tmp_name"], $target_file)) {
                 echo "The file ". basename( $_FILES["path"]["name"]). " has been uploaded.";
@@ -221,7 +221,7 @@ class ArticleMemberController extends Controller
             ));
         }
 
-        return redirect('admin/article/member');
+        return redirect('admin/article/media');
 
     }
 
@@ -235,6 +235,6 @@ class ArticleMemberController extends Controller
     {
         //
         Article::where('id', $id)->delete();
-        return redirect('admin/article/member');
+        return redirect('admin/article/media');
     }
 }

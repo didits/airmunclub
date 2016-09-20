@@ -22,7 +22,7 @@
 <!-- <div class="panel" style="padding:15px;">            -->
             <div class="panel-body container-fluid" style="width:75%;">
 
-              <form autocomplete="off" method="post" action="{{URL::to('admin/article')}}" enctype="multipart/form-data" >
+              <form autocomplete="off" method="post" action="{{URL::to('admin/article/member')}}" enctype="multipart/form-data" >
                @include('master.form_add_post')
                   <input type="hidden" name="type" value="member" required="required">
                </form>

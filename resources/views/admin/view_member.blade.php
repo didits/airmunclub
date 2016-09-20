@@ -39,7 +39,7 @@
             </li>
             <li class="col-sm-3 col-xs-5">
              <div class="col-md-9">                
-                <button type="button" class="btn btn-block btn-info" onclick="location.href=''">Tambah Artikel</button>
+                <button type="button" class="btn btn-block btn-info" onclick="location.href='{{url('admin/article/member/create')}}'">Tambah Artikel</button>
 </div>
             </li>
           </ul>
@@ -73,14 +73,14 @@
                             <td><?php $date = date_create($art->updated_at); echo date_format($date, 'jS F Y H:i:s');?></td>
                             <td class="text-nowrap">
                                 <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"
-                                        data-original-title="Edit" onclick="location.href='{{ URL::to('admin/article/'. $art->id.'/edit') }}'">
+                                        data-original-title="Edit" onclick="location.href='{{ URL::to('admin/article/member/'. $art->id.'/edit') }}'">
                                     <i class="icon wb-wrench" aria-hidden="true"></i>
                                 </button>
-                                <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"
-                                        data-original-title="Delete" onclick="location.href='{{ URL::to('admin/article/delete/'. $art->id) }}'">
+                                <button id="delete" data-id="{{$art->id}}" type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="modal"
+                                        data-original-title="Delete" data-target="#myModal">
                                     <i class="icon wb-close" aria-hidden="true"></i>
                                 </button>
-                                <button id="delete" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-id="{{$art->id}}" data-target="#myModal">Open Modal</button>                            </td>
+                            </td>
 
                         </tr>
                     @endforeach
@@ -169,9 +169,8 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("#submit").click(function(){
-            $('#formID').attr('action', 'article/'+$("#delete").data('id'));
+            $('#formID').attr('action', 'member/'+$("#delete").data('id'));
         });
     });
 </script>
-
 
