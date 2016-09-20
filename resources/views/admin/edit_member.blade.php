@@ -18,11 +18,16 @@
 <link rel="stylesheet" href="{{URL::to('aset/css/../fonts/font-awesome/font-awesome.css')}}">
 
 
-<body >
-                
-<!-- <div class="panel" style="padding:15px;">            -->
-            <div class="panel-body container-fluid" style="width:75%;">
 
-              <form autocomplete="off" method="post" action="" >
-                
-                @include('master.form_edit_post')
+<!-- <div class="panel" style="padding:15px;">            -->
+<div class="panel-body container-fluid" style="width:75%;">
+
+    <form autocomplete="off" method="POST" action="{{URL::to('admin/article/'.$article->id)}}" enctype="multipart/form-data" >
+        <input type="hidden" name="_method" value="PATCH">
+        @include('master.form_edit_post')
+        <input type="hidden" name="type" value="member" required="required">
+    </form>
+</div>
+        </div>
+      </div>
+    </div>

@@ -1,48 +1,39 @@
+{!! csrf_field() !!}
                 <div >
                   <br>
                   <h4 class="example-title">Judul</h4>
-                  <input type="text" class="form-control" id="inputPlaceholder" placeholder="Judul" name="Judul" required="required">
+                  <input type="text" class="form-control" id="inputPlaceholder" placeholder="Judul" name="title" required="required">
                   <br>
                 </div>
  <!-- Panel Standard Editor -->
-   <div class="panel">
+            <div class="panel">
             <div class="panel-heading">
               <h4 class="example-title">Artikel</h4>
             </div>
             <div >
-              <div id="summernote" data-plugin="summernote">
-                <h2>WYSIWYG Editor</h2> Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit. Aliquam ullamcorper sapien non nisl facilisis bibendum in
-                quis tellus. Duis in urna bibendum turpis pretium fringilla. Aenean
-                neque velit, porta eget mattis ac, imperdiet quis nisi. Donec non
-                dui et tortor vulputate luctus. Praesent consequat rhoncus velit,
-                ut molestie arcu venenatis sodales.
-                <h4>Lacinia</h4>
-                <ul>
-                  <li>Suspendisse tincidunt urna ut velit ullamcorper fermentum.</li>
-                  <li>Nullam mattis sodales lacus, in gravida sem auctor at.</li>
-                  <li>Praesent non lacinia mi.</li>
-                  <li>Mauris a ante neque.</li>
-                  <li>Aenean ut magna lobortis nunc feugiat sagittis.</li>
-                </ul>
-                <h4>Pellentesque Adipiscing</h4> Maecenas quis ante ante. Nunc adipiscing
-                rhoncus rutrum. Pellentesque adipiscing urna mi, ut tempus lacus
-                ultrices ac. Pellentesque sodales, libero et mollis interdum, dui
-                odio vestibulum dolor, eu pellentesque nisl nibh quis nunc. Sed
-                porttitor leo adipiscing venenatis vehicula. Aenean quis viverra
-                enim. Praesent porttitor ut ipsum id ornare.
-              </div>
+              <textarea id="summernote" data-plugin="summernote" name="description">
+              </textarea>
             </div>
           </div>
           <!-- End Panel Standard Editor -->
 
+                <div >
+                    <br>
+                    <h4 class="example-title">Image</h4>
+                    <input type='file' id="path" style="" name="path" />
+                    <br>
+                    <div>
+                        <img id="blah" src="{{URL::to('assets/img/blank.png')}}" alt="your image" style="margin-left:2%;width:30%" />
+                    </div>
+                    <br>
+                </div>
 
            
-                <div>
-                  <h4 class="example-title">Author</h4>
-                  <input type="text" class="form-control" id="inputPlaceholder" placeholder="Author" name="Author" required="required">
-                  <br>
-                </div>
+                {{--<div>--}}
+                  {{--<h4 class="example-title">Author</h4>--}}
+                  {{--<input type="text" class="form-control" id="inputPlaceholder" placeholder="Author" name="Author" required="required">--}}
+                  {{--<br>--}}
+                {{--</div>--}}
                 
             
               <div style="text-align: center">
@@ -50,11 +41,6 @@
                    <button type="button submit" class="btn-primary btn">Submit</button>
               </div>
 
-        </div> 
-      </div>
-     </div>
-     
-     </body>
 
 
      <!-- Core  -->
@@ -111,6 +97,25 @@
       };
     })(document, window, jQuery);
   </script>
+<script>
+    function readURL(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah').attr('src', e.target.result);
+                $('#blah').attr('width', "50%");
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#path").change(function(){
+        readURL(this);
+    });
+</script>
 
 </body>
 

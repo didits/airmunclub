@@ -102,7 +102,7 @@ $(document).ready(function(){
                 </ul>
                 <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">                    
                   <li role="presentation">
-                    <a href="" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Keluar</a>
+                    <a href="{{url('admin/logout')}}" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Keluar</a>
                   </li>    
                 </ul>
                     </div>
