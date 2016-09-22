@@ -4,16 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Mun extends Model
+class Material extends Model
 {
     //
-    protected $table = 'mun';
+    protected $table = 'material';
     protected $primaryKey = 'id';
     public $incrementing = true;
     public $timestamps = true;
 
     protected $fillable = [
-        'description', 'type','id_author','path1','path2','path3'
+        'title','description', 'link','id_author'
     ];
 
 }

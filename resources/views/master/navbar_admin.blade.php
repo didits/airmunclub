@@ -7,21 +7,21 @@
           <ul class="site-menu">
             <li class="site-menu-category">Halaman Admin</li>
             <li class="site-menu-item">
-              <a class="animsition-link" href="" data-slug="uikit-buttons">
+              <a class="animsition-link" href="{{url('admin/material')}}" data-slug="uikit-buttons">
                 <i class="site-menu-icon wb-file" aria-hidden="true"></i>
                 <span class="site-menu-title">Materials</span>
                 <!-- <span class="site-menu-arrow"></span> -->
               </a>            
             </li>     
             <li class="site-menu-item">
-              <a class="animsition-link" href="" data-slug="uikit-buttons">
+              <a class="animsition-link" href="{{url('admin/mun/national')}}" data-slug="uikit-buttons">
                 <i class="site-menu-icon wb-file" aria-hidden="true"></i>
                 <span class="site-menu-title">National MUN</span>
                 <!-- <span class="site-menu-arrow"></span> -->
               </a>            
             </li>
                         <li class="site-menu-item">
-              <a class="animsition-link" href="" data-slug="uikit-buttons">
+              <a class="animsition-link" href="{{url('admin/mun/international')}}" data-slug="uikit-buttons">
                 <i class="site-menu-icon wb-file" aria-hidden="true"></i>
                 <span class="site-menu-title">International MUN</span>
                 <!-- <span class="site-menu-arrow"></span> -->

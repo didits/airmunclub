@@ -134,7 +134,7 @@ class ArticleMemberController extends Controller
     {
         //
         // get all the nerds
-        $article = Article::find($id)->first();
+        $article = Article::where('id',$id)->first();
 
         // load the view and pass the nerds
         return View::make('admin.edit_member')

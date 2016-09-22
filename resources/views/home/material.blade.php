@@ -37,43 +37,16 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    @foreach($material as $art)
                                         <tr>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
+                                            <td><?php $date = date_create($art->updated_at); echo date_format($date, 'jS F Y H:i:s');?></td>
+                                            <td>{{ $art->title }}</td>
+                                            <td>{{ $art->description}}</td>
+                                            <td><a href="http://{{$art->link}}">{{ $art->link}}</a></td>
                                         </tr>
-                                        <tr>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                            <td>Table Data</td>
-                                        </tr>
-</tbody>
+                                    @endforeach
+
+                                    </tbody>
                                 </table>
                             </div>
                             </article>

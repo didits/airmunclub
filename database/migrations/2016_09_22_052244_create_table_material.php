@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableMun extends Migration
+class CreateTableMaterial extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,12 @@ class CreateTableMun extends Migration
      */
     public function up()
     {
-        Schema::create('mun', function (Blueprint $table) {
+        Schema::create('material', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title');
             $table->text('description');
-            $table->string('type');
+            $table->string('link');
             $table->integer('id_author');
-            $table->string('path1');
-            $table->string('path2');
-            $table->string('path3');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateTableMun extends Migration
      */
     public function down()
     {
-        Schema::drop('mun');
+        Schema::drop('material');
     }
 }

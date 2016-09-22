@@ -1,10 +1,4 @@
 {!! csrf_field() !!}
-                <div >
-                  <br>
-                  <h4 class="example-title">Judul</h4>
-                  <input type="text" class="form-control" id="inputPlaceholder" placeholder="Judul" name="title" required="required">
-                  <br>
-                </div>
  <!-- Panel Standard Editor -->
             <div class="panel">
             <div class="panel-heading">
@@ -19,16 +13,37 @@
 
                 <div >
                     <br>
-                    <h4 class="example-title">Image</h4>
-                    <input type='file' id="path" style="" name="path" />
+                    <h4 class="example-title">Image 1</h4>
+                    <input type='file' id="path1" style="" name="path1" />
                     <br>
                     <div>
-                        <img id="blah" src="{{URL::to('assets/img/blank.png')}}" alt="your image" style="margin-left:2%;width:30%" />
+                        <img id="blah1" src="{{URL::to('assets/img/blank.png')}}" alt="your image" style="margin-left:2%;width:30%" />
                     </div>
                     <br>
                 </div>
 
-           
+                <div >
+                    <br>
+                    <h4 class="example-title">Image 2</h4>
+                    <input type='file' id="path2" style="" name="path2" />
+                    <br>
+                    <div>
+                        <img id="blah2" src="{{URL::to('assets/img/blank.png')}}" alt="your image" style="margin-left:2%;width:30%" />
+                    </div>
+                    <br>
+                </div>
+
+                <div >
+                    <br>
+                    <h4 class="example-title">Image 3</h4>
+                    <input type='file' id="path3" style="" name="path3" />
+                    <br>
+                    <div>
+                        <img id="blah3" src="{{URL::to('assets/img/blank.png')}}" alt="your image" style="margin-left:2%;width:30%" />
+                    </div>
+                    <br>
+                </div>
+
                 {{--<div>--}}
                   {{--<h4 class="example-title">Author</h4>--}}
                   {{--<input type="text" class="form-control" id="inputPlaceholder" placeholder="Author" name="Author" required="required">--}}
@@ -98,21 +113,56 @@
     })(document, window, jQuery);
   </script>
 <script>
-    function readURL(input) {
+    function readURL1(input) {
 
         if (input.files && input.files[0]) {
             var reader = new FileReader();
 
             reader.onload = function (e) {
-                $('#blah').attr('src', e.target.result);
-                $('#blah').attr('width', "50%");
+                $('#blah1').attr('src', e.target.result);
+                $('#blah1').attr('width', "50%");
             }
 
             reader.readAsDataURL(input.files[0]);
         }
     }
 
-    $("#path").change(function(){
-        readURL(this);
+    function readURL2(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah2').attr('src', e.target.result);
+                $('#blah2').attr('width', "50%");
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    function readURL3(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah3').attr('src', e.target.result);
+                $('#blah3').attr('width', "50%");
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#path1").change(function(){
+        readURL1(this);
     });
+    $("#path2").change(function(){
+        readURL2(this);
+    });
+    $("#path3").change(function(){
+        readURL3(this);
+    });
+
 </script>

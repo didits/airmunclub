@@ -37,7 +37,7 @@
             </li>
             <li class="col-sm-3 col-xs-5">
              <div class="col-md-9">                
-                <button type="button" class="btn btn-block btn-info" onclick="location.href=''">Tambah Artikel</button>
+                <button type="button" class="btn btn-block btn-info" onclick="location.href='{{url('admin/material/create')}}'">Tambah Tabel </button>
 </div>
             </li>
           </ul>
@@ -47,40 +47,45 @@
         <div class="panel-body">
          <!-- Example Bordered Table -->
               <div class="example-wrap"> <!--ganti kolom searching-->
-                
-                <div class="example table-responsive">
-                  <table class="table table-bordered table-striped">
-                    <thead>
-                      <tr>
-                        <th>Judul</th>
-                        <th>Author</th>
-                       <th>Published</th>
-                       <th>Last Updated</th>
-                        <th class="text-nowrap">Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
 
-                     <tr>
-                        <td> <a href="#">Lorem Ipsum </a></td>
-                      <td> Lorem Ipsum </td>
-                      <td> 12-12-2012 </td>
-                    <td>14-12-2012</td>
-                        <td class="text-nowrap">
-                          <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"
-                          data-original-title="Edit" onclick="location.href=''">
-                            <i class="icon wb-wrench" aria-hidden="true"></i>
-                          </button>
-                          <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"  
-                          data-original-title="Delete" onclick="location.href=''">
-                            <i class="icon wb-close" aria-hidden="true"></i>
-                          </button>
-                        </td>
-                      </tr>
-           
-                    </tbody>
-                  </table>
-                </div>
+                  <div class="example table-responsive">
+                      <table class="table table-bordered table-striped">
+                          <thead>
+                          <tr>
+                              <th width="5%" class="text-center">No</th>
+                              <th>Date</th>
+                              <th>Title</th>
+                              <th>Description</th>
+                              <th>Link</th>
+                              <th class="text-nowrap">Action</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <?php $i = 1;?>
+                          @foreach($data as $art)
+                              <tr>
+                                  <td class="text-center"><?php echo $i++ ?></td>
+                                  <td><?php $date = date_create($art->updated_at); echo date_format($date, 'jS F Y H:i:s');?></td>
+                                  <td>{{ $art->title }}</td>
+                                  <td>{{ $art->description}}</td>
+                                  <td><a href="http://{{$art->link}}">{{ $art->link}}</a></td>
+                                  <td class="text-nowrap">
+                                      <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"
+                                              data-original-title="Edit" onclick="location.href='{{ URL::to('admin/material/'. $art->id.'/edit') }}'">
+                                          <i class="icon wb-wrench" aria-hidden="true"></i>
+                                      </button>
+                                      <button id="delete" data-id="{{$art->id}}" type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="modal"
+                                              data-original-title="Delete" data-target="#myModal">
+                                          <i class="icon wb-close" aria-hidden="true"></i>
+                                      </button>
+                                  </td>
+
+                              </tr>
+                          @endforeach
+
+                          </tbody>
+                      </table>
+                  </div>
               </div>
              
         </div>
@@ -88,6 +93,32 @@
     </div>
   
   <!-- End Page -->
+
+<!-- Modal HTML -->
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Confirmation</h4>
+            </div>
+
+            <form id="formID" method="POST">
+                {!! csrf_field() !!}
+                <input type="hidden" name="_method" value="DELETE">
+                <div class="modal-body">
+                    <p>Do you want to delete this row?</p>
+                    <p class="text-warning"><small>If you delete, your changes will be lost.</small></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button id="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 
   <!-- Core  -->
   <script src="{{URL::to('aset/vendor/jquery/jquery.js')}}"></script>
@@ -133,6 +164,10 @@
     })(document, window, jQuery);
   </script>
 
-</body>
-
-</html>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#submit").click(function(){
+            $('#formID').attr('action', 'material/'+$("#delete").data('id'));
+        });
+    });
+</script>

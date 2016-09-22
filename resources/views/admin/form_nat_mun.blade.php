@@ -18,11 +18,15 @@
 <link rel="stylesheet" href="{{URL::to('aset/css/../fonts/font-awesome/font-awesome.css')}}">
 
 
-<body >
-                
 <!-- <div class="panel" style="padding:15px;">            -->
             <div class="panel-body container-fluid" style="width:75%;">
 
-              <form autocomplete="off" method="post" action="" >
-                
-   @include('master.form_add_post')
+                <form autocomplete="off" method="post" action="{{URL::to('admin/mun/national')}}" enctype="multipart/form-data" >
+                    @include('master.form_add_post_mun')
+                    <input type="hidden" name="type" value="national" required="required">
+                </form>
+
+            </div>
+        </div>
+      </div>
+    </div>

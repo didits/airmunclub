@@ -108,6 +108,3 @@
                         readURL(this);
                     });
                 </script>
-</body>
-
-</html>

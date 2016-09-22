@@ -34,6 +34,13 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/posting/{id}', 'HomeController@posting');
 
+Route::get('/material', 'HomeController@material');
+
+Route::get('/nat_mun/{id}', 'HomeController@natmun');
+
+Route::get('/int_mun/{id}', 'HomeController@intmun');
+
+
 Route::get('/', function () {
 	return view('home/index');
 });
@@ -46,13 +53,6 @@ Route::get('/contact', function () {
 	return view('home/contact');
 });
 
-Route::get('/int_mun', function () {
-	return view('home/int_mun');
-});
-
-Route::get('/nat_mun',function(){
-	return view('home/nat_mun');
-});
 
 Route::get('/faq',function(){
 	return view('home/faq');
@@ -66,10 +66,6 @@ Route::get('/gallery',function(){
 	return view('home/gallery');
 });
 
-Route::get('/material',function(){
-	return view('home/material');
-});
-
 Route::get('/post',function(){
 	return view('home/post');
 });
@@ -79,6 +75,9 @@ Route::get('/post',function(){
 Route::group(['middleware' => 'auth','prefix' => 'admin'], function () {
 	Route::resource('article/member', 'ArticleMemberController');
 	Route::resource('article/media', 'ArticleMediaCoverageController');
+	Route::resource('material', 'MaterialsController');
+	Route::resource('mun/national', 'NatMunController');
+	Route::resource('mun/international', 'IntMunController');
 
 	Route::get('/view_material',function(){
 		return view('admin/view_material');
