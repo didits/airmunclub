@@ -19,7 +19,7 @@ class ArticleMemberController extends Controller
     {
         //
         // get all the nerds
-        $article = Article::where('type','member')->get();
+        $article = Article::where('type','member')->orderBy('id','desc')->get();
 
         // load the view and pass the nerds
         return View::make('admin.view_member')

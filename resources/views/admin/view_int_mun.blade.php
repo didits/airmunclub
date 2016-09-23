@@ -164,8 +164,9 @@
 </script>
 <script type="text/javascript">
     $(document).ready(function(){
-        $("#submit").click(function(){
-            $('#formID').attr('action', 'international/'+$("#delete").data('id'));
+        $(document).on("click", "#delete", function() {
+            id = $(this).data('id');
+            $('#formID').attr('action', 'international/'+id);
         });
     });
 </script>

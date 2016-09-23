@@ -133,6 +133,7 @@
 
 
   <!-- Scripts -->
+
   <script src="{{URL::to('aset/js/core.js')}}"></script>
   <script src="{{URL::to('aset/js/site.js')}}"></script>
 
@@ -161,8 +162,9 @@
 </script>
 <script type="text/javascript">
     $(document).ready(function(){
-        $("#submit").click(function(){
-            $('#formID').attr('action', 'national/'+$("#delete").data('id'));
+        $(document).on("click", "#delete", function() {
+            id = $(this).data('id');
+            $('#formID').attr('action', 'national/'+id);
         });
     });
 </script>

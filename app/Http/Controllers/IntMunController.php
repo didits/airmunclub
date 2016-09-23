@@ -19,7 +19,7 @@ class IntMunController extends Controller
     {
         //
         // get all the nerds
-        $mun = Mun::where('type','international')->get();
+        $mun = Mun::where('type','international')->orderBy('id','desc')->get();
 
         // load the view and pass the nerds
         return View::make('admin.view_int_mun')

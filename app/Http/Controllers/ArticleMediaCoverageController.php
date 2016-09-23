@@ -19,7 +19,7 @@ class ArticleMediaCoverageController extends Controller
     {
         //
         // get all the nerds
-        $article = Article::where('type','media')->get();
+        $article = Article::where('type','media')->orderBy('id','desc')->get();
 
         // load the view and pass the nerds
         return View::make('admin.view_media_coverage')

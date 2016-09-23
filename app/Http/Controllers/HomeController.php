@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Request;
 use App\Article;
 use App\Material;
 use App\Mun;
+use App\Contact;
 use Illuminate\Support\Facades\View;
 
 class HomeController extends Controller
@@ -37,7 +38,7 @@ class HomeController extends Controller
 
     public function material()
     {
-        $material=Material::get();
+        $material=Material::orderBy('id','desc')->get();
         // load the view and pass the nerds
         return View::make('home.material')
             ->with('material', $material);
@@ -58,5 +59,28 @@ class HomeController extends Controller
         return View::make('home.int_mun')
             ->with('mun', $mun);
     }
+
+    public function contact()
+    {
+        return view('home/contact');
+    }
+
+    public function contact_submit(Request $request)
+    {
+        //
+        $data = $request::all();
+        Contact::create(array(
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'email' => $data['email'],
+            'phone' => $data['phone'],
+            'subject' => $data['subject'],
+            'message' => $data['message'],
+        ));
+        return redirect('contact');
+
+    }
+
+
 
 }

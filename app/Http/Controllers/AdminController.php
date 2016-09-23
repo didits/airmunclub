@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Request;
 use App\Http\Requests;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Auth;
+use App\Contact;
 
-class HomeController extends Controller
+class AdminController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -26,4 +29,15 @@ class HomeController extends Controller
     {
         return view('home/index');
     }
+
+    public function contact()
+    {
+        // get all the nerds
+        $contact = Contact::orderBy('id','desc')->get();
+
+        // load the view and pass the nerds
+        return View::make('admin.view_contact')
+            ->with('contact', $contact);
+    }
+
 }

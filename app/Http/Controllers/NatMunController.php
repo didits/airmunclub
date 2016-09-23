@@ -19,7 +19,7 @@ class NatMunController extends Controller
     {
         //
         // get all the nerds
-        $mun = Mun::where('type','national')->get();
+        $mun = Mun::where('type','national')->orderBy('id','desc')->get();
 
         // load the view and pass the nerds
         return View::make('admin.view_nat_mun')

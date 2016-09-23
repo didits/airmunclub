@@ -40,6 +40,10 @@ Route::get('/nat_mun/{id}', 'HomeController@natmun');
 
 Route::get('/int_mun/{id}', 'HomeController@intmun');
 
+Route::get('/contact', 'HomeController@contact');
+
+Route::post('/contact_submit', 'HomeController@contact_submit');
+
 
 Route::get('/', function () {
 	return view('home/index');
@@ -47,10 +51,6 @@ Route::get('/', function () {
 
 Route::get('/about', function () {
 	return view('home/about');
-});
-
-Route::get('/contact', function () {
-	return view('home/contact');
 });
 
 
@@ -79,21 +79,7 @@ Route::group(['middleware' => 'auth','prefix' => 'admin'], function () {
 	Route::resource('mun/national', 'NatMunController');
 	Route::resource('mun/international', 'IntMunController');
 
-	Route::get('/view_material',function(){
-		return view('admin/view_material');
-	});
-
-	Route::get('/form_material',function(){
-		return view('admin/form_material');
-	});
-
-	Route::get('/form_member',function(){
-		return view('admin/form_member');
-	});
-
-	Route::get('/form_edit_material',function(){
-		return view('admin/edit_material');
-	});
+	Route::get('contact', 'AdminController@contact');
 });
 
 

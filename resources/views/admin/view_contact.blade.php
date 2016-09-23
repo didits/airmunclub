@@ -6,7 +6,7 @@
     <div class="page-content">
       <!-- Judul -->
       <div class="page-header">
-        <h1 class="page-title">Materials</h1>
+        <h1 class="page-title">Contact</h1>
         <div class="page-header-actions">
          </div>
       </div>
@@ -54,32 +54,26 @@
                           <tr>
                               <th width="5%" class="text-center">No</th>
                               <th>Date</th>
-                              <th>Title</th>
-                              <th>Description</th>
-                              <th>Link</th>
-                              <th class="text-nowrap">Action</th>
+                              <th>Fist Name</th>
+                              <th>Last Name</th>
+                              <th>Email</th>
+                              <th>Phone</th>
+                              <th>Subject</th>
+                              <th>Message</th>
                           </tr>
                           </thead>
                           <tbody>
                           <?php $i = 1;?>
-                          @foreach($data as $art)
+                          @foreach($contact as $art)
                               <tr>
                                   <td class="text-center"><?php echo $i++ ?></td>
                                   <td><?php $date = date_create($art->updated_at); echo date_format($date, 'jS F Y H:i:s');?></td>
-                                  <td>{{ $art->title }}</td>
-                                  <td>{{ $art->description}}</td>
-                                  <td><a href="http://{{$art->link}}">{{ $art->link}}</a></td>
-                                  <td class="text-nowrap">
-                                      <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"
-                                              data-original-title="Edit" onclick="location.href='{{ URL::to('admin/material/'. $art->id.'/edit') }}'">
-                                          <i class="icon wb-wrench" aria-hidden="true"></i>
-                                      </button>
-                                      <button id="delete" data-id="{{$art->id}}" type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="modal"
-                                              data-original-title="Delete" data-target="#myModal">
-                                          <i class="icon wb-close" aria-hidden="true"></i>
-                                      </button>
-                                  </td>
-
+                                  <td>{{ $art->first_name }}</td>
+                                  <td>{{ $art->last_name }}</td>
+                                  <td>{{ $art->email }}</td>
+                                  <td>{{ $art->phone }}</td>
+                                  <td>{{ $art->subject }}</td>
+                                  <td>{{ $art->message}}</td>
                               </tr>
                           @endforeach
 
@@ -91,33 +85,6 @@
         </div>
       </div>
     </div>
-  
-  <!-- End Page -->
-
-<!-- Modal HTML -->
-<div id="myModal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Confirmation</h4>
-            </div>
-
-            <form id="formID" method="POST">
-                {!! csrf_field() !!}
-                <input type="hidden" name="_method" value="DELETE">
-                <div class="modal-body">
-                    <p>Do you want to delete this row?</p>
-                    <p class="text-warning"><small>If you delete, your changes will be lost.</small></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button id="submit" class="btn btn-primary">Save changes</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
 
 
   <!-- Core  -->
@@ -163,12 +130,3 @@
       });
     })(document, window, jQuery);
   </script>
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        $(document).on("click", "#delete", function() {
-            id = $(this).data('id');
-            $('#formID').attr('action', 'material/'+id);
-        });
-    });
-</script>

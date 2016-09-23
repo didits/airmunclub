@@ -171,3 +171,11 @@
         });
     });
 </script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(document).on("click", "#delete", function() {
+            id = $(this).data('id');
+            $('#formID').attr('action', 'media/'+id);
+        });
+    });
+</script>

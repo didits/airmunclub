@@ -168,9 +168,9 @@
   </script>
 <script type="text/javascript">
     $(document).ready(function(){
-        $("#submit").click(function(){
-            $('#formID').attr('action', 'member/'+$("#delete").data('id'));
+        $(document).on("click", "#delete", function() {
+            id = $(this).data('id');
+            $('#formID').attr('action', 'member/'+id);
         });
     });
 </script>
-

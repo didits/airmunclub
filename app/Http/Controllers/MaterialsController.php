@@ -21,7 +21,7 @@ class MaterialsController extends Controller
         //
         //
         // get all the nerds
-        $data = Material::get();
+        $data = Material::orderBy('id','desc')->get();
 
         // load the view and pass the nerds
         return View::make('admin.view_material')

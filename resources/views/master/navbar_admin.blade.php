@@ -40,7 +40,14 @@
                 <span class="site-menu-title">Media Coverage</span>
                 <!-- <span class="site-menu-arrow"></span> -->
               </a>            
-            </li>     
+            </li>
+            <li class="site-menu-item">
+              <a class="animsition-link" href="{{url('admin/contact')}}" data-slug="uikit-buttons">
+                <i class="site-menu-icon wb-file" aria-hidden="true"></i>
+                <span class="site-menu-title">List Contact</span>
+                <!-- <span class="site-menu-arrow"></span> -->
+              </a>
+            </li>
 
           </ul>
         </div>
