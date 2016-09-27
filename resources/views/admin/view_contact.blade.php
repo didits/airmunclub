@@ -37,7 +37,7 @@
             </li>
             <li class="col-sm-3 col-xs-5">
              <div class="col-md-9">                
-                <button type="button" class="btn btn-block btn-info" onclick="location.href='{{url('admin/material/create')}}'">Tambah Tabel </button>
+             <!--   <button type="button" class="btn btn-block btn-info" onclick="location.href='{{url('admin/material/create')}}'">Tambah Tabel </button>-->
 </div>
             </li>
           </ul>

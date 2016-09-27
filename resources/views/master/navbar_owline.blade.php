@@ -15,11 +15,28 @@
                 <li>
                     <a href="">About</a>
                 </li>
-                <li>
-                    <a href="">Activities</a>
+                <li class="uk-parent" data-uk-dropdown>
+                   
+                   <a href="">Activities<i class="uk-icon-caret-down"> </i></a>
+                    <div class="uk-dropdown uk-dropdown-navbar">
+                                        <ul class="uk-nav uk-nav-navbar">
+                                            <li><a href="#">International MUN</a></li>
+                                            <li><a href="#">National MUN</a></li>
+                                            <li><a href="#">Member</a></li>
+                                        </ul>
+                    </div>
                 </li>
-                <li>
-                    <a href="">Archive</a>
+                <li class="uk-parent" data-uk-dropdown>
+                
+                    <a href="">Archive <i class="uk-icon-caret-down"></i></a>
+                <div class="uk-dropdown uk-dropdown-navbar">
+                                        <ul class="uk-nav uk-nav-navbar">
+                                            <li><a href="#">Materials</a></li>
+                                            <li><a href="#">Media Coverage</a></li>
+                                            <li><a href="#">Gallery</a></li>
+                                        </ul>
+                    </div>
+                
                 </li>
                 <li>
                     <a href="">Events Calender</a>
@@ -27,9 +44,11 @@
                 <li>
                     <a href="">FAQ</a>
                 </li>
+                 
                 <li>
                     <a href="">Contact Us</a>
                 </li>
+
 
             </ul>
         </div>

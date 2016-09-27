@@ -70,6 +70,14 @@ Route::get('/post',function(){
 	return view('home/post');
 });
 
+Route::get('/member_page', function () {
+	return view('home/member_page');
+});
+Route::get('/media_coverage', function () {
+	return view('home/media_coverage');
+});
+
+
 //ADMIN
 
 Route::group(['middleware' => 'auth','prefix' => 'admin'], function () {

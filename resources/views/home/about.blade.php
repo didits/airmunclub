@@ -15,8 +15,8 @@
     <div class="uk-panel  uk-text-center uk-contrast">
 
         
-        <h1 class="uk-margin-top">Born out a of passion for food, <br class="uk-hidden-small">we provide fresh products.</h1>
-<p class="uk-margin-large-bottom">George Thompson, CEO and Founder</p>
+        <h1 class="uk-margin-top">ABOUT AIRMUNCLUB</h1>
+
     </div>
 
 </div>
@@ -32,8 +32,9 @@
     <div class="uk-panel  uk-text-center ">
 
         
-        <p class="uk-text-large">Our providers are chosen carefully to make sure that<br class="uk-hidden-small"> only the best ingredients land on your dinner table.</p>
+<!--        <p class="uk-text-large">Our providers are chosen carefully to make sure that<br class="uk-hidden-small"> only the best ingredients land on your dinner table.</p>-->
 
+<p class="uk-text-large">Airlangga Model United Nations Club (AIRMUN Club) is a form of community <br class="uk-hidden-small"> which facilitates every student of Universitas Airlangga with interest and <br class="uk-hidden-small"> passion to improve its diplomatic and debate skills on the global issue. </p>
     </div>
 
 </div>
@@ -50,8 +51,17 @@
 
     
     <div class="uk-width-medium-3-4 uk-align-center uk-column-medium-1-2">
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.<br /> <br /> In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.<br /> <br /> Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.</p>
-        <p class="uk-margin-remove"><b>George Thompson</b>, CEO and Founder</p>
+
+    <p>
+       AIRMUN Club is a platform for all students who has concerns on international issues such as politics, diplomacy, international business, law, and human rights to gather and exchanging ideas regarding those matters. Our community aim to give the same opportunity and space to all students to improve their public speaking ability, expressing their ideas on international issues, and furthermore, to participate as a delegate represents Universitas Airlangga on national and international MUN conference such as Harvard National Model United Nations (HNMUN), Harvard World Model United Nations (Harvard WMUN), Asia-Pacific Model United Nations Conference (AMUNC), Jakarta Model United Nations (JMUN), and many more.
+                 <br /> <br />
+                 Students joining our community are not only able to participate as a delegate in any MUN conference but also having responsibility for spreading the spirit of MUN through Airlangga School of Diplomacy (ASOD) which organized and held annually by our members. The aim of ASOD is to widespread anything related to MUN for those who do not thoroughly understand the mechanism of MUN, and indirectly encouraged others to have the same concerns as we do on international issues. 
+<br /> <br />
+                 ASOD itself would enable our members to practice and improve their MUN skills through direct and real conference beside daily training and debate practice, improve their organization skills, and giving chances to build networks with other MUNers. Furthermore, our community would not only benefit members but also students outside of our community to further acknowledge the importance of diplomacy and public speaking skills.
+
+
+
+        </p>
 
 </div>
 </article>

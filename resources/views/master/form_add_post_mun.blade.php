@@ -10,7 +10,13 @@
             </div>
           </div>
           <!-- End Panel Standard Editor -->
-
+              <div >
+            <br>
+            <h4 class="example-title">Link</h4>
+            <input type="link" class="form-control" id="inputPlaceholder" placeholder="Link" name="link" required="required">
+            <br>
+        </div>
+        
                 <div >
                     <br>
                     <h4 class="example-title">Image 1</h4>

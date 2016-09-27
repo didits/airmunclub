@@ -26,15 +26,15 @@
         {!! csrf_field() !!}
         <div >
             <br>
-            <h4 class="example-title">Judul</h4>
-            <input type="text" class="form-control" id="inputPlaceholder" placeholder="Judul" name="title" required="required">
+            <h4 class="example-title">Title</h4>
+            <input type="text" class="form-control" id="inputPlaceholder" placeholder="Title" name="title" required="required" >
             <br>
         </div>
 
         <div >
             <br>
-            <h4 class="example-title">Deskripsi</h4>
-            <input type="text" class="form-control" id="inputPlaceholder" placeholder="Deskripsi" name="description" required="required">
+            <h4 class="example-title">Description</h4>
+            <textarea style="width: 782px; height: 193px;" type="text" class="form-control" id="inputPlaceholder" placeholder="Description" name="description" required="required"> </textarea>
             <br>
         </div>
 
