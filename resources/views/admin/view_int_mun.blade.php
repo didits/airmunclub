@@ -65,7 +65,7 @@
                       @foreach($mun as $art)
                           <tr>
                               <td class="text-center"><?php echo $i++ ?></td>
-                              <td>{{ $art->description }}</td>
+                              <td>{{ substr(nl2br($art->description),0,20)}}</td>
                               <td><img src="{{$art->path1}}" style="width:25%"><img src="{{$art->path2}}" style="width:25%"><img src="{{$art->path3}}" style="width:25%"> </td>
                               <td><?php $date = date_create($art->updated_at); echo date_format($date, 'jS F Y H:i:s');?></td>
                               <td class="text-nowrap">

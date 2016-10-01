@@ -65,10 +65,10 @@
                           @foreach($data as $art)
                               <tr>
                                   <td class="text-center"><?php echo $i++ ?></td>
-                                  <td><?php $date = date_create($art->updated_at); echo date_format($date, 'jS F Y H:i:s');?></td>
+                                  <td><?php $date = date_create($art->updated_at); echo date_format($date, 'jS F Y');?></td>
                                   <td>{{ $art->title }}</td>
                                   <td>{{ $art->description}}</td>
-                                  <td><a href="http://{{$art->link}}">{{ $art->link}}</a></td>
+                                  <td><a href="{{$art->link}}">{{ $art->link}}</a></td>
                                   <td class="text-nowrap">
                                       <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"
                                               data-original-title="Edit" onclick="location.href='{{ URL::to('admin/material/'. $art->id.'/edit') }}'">
@@ -112,7 +112,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button id="submit" class="btn btn-primary">Save changes</button>
+                    <button id="submit" class="btn btn-danger">Delete</button>
                 </div>
             </form>
         </div>
