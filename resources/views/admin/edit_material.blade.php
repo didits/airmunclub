@@ -19,7 +19,7 @@
 
 
             <!-- <div class="panel" style="padding:15px;">            -->
-            <div class="panel-body container-fluid" style="width:75%;">
+            <div class="panel-body container-fluid">
 
                 <form autocomplete="off" method="POST" action="{{URL::to('admin/material/'.$material->id)}}" >
                     <input type="hidden" name="_method" value="PATCH">

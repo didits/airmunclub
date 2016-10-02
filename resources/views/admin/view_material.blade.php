@@ -18,28 +18,6 @@
 <!-- Example Quick Menu Small -->
         
           <ul class="nav-quick nav-quick-sm row">
-            <li class="col-sm-2 col-xs-4">
-           
-            </li>
-            <li class="col-sm-2 col-xs-4">
-            <form>
-            </form>
-
-            </li>
-            <li class="col-sm-2 col-xs-4">
-             
-            </li>
-            <li class="col-sm-2 col-xs-4">
-            
-            </li>
-            <li class="col-sm-1 col-xs-4">
-              
-            </li>
-            <li class="col-sm-3 col-xs-5">
-             <div class="col-md-9">                
-                <button type="button" class="btn btn-block btn-info" onclick="location.href='{{url('admin/material/create')}}'">Tambah Tabel </button>
-</div>
-            </li>
           </ul>
         <!-- End Example Quick Menu Small -->
                 
@@ -47,7 +25,7 @@
         <div class="panel-body">
          <!-- Example Bordered Table -->
               <div class="example-wrap"> <!--ganti kolom searching-->
-
+                  <button type="button" style="width:200px" class="btn btn-block btn-info" onclick="location.href='{{url('admin/material/create')}}'">Add Material</button>
                   <div class="example table-responsive">
                       <table class="table table-bordered table-striped">
                           <thead>

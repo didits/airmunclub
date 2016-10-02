@@ -21,7 +21,7 @@
 <body >
                 
 <!-- <div class="panel" style="padding:15px;">            -->
-<div class="panel-body container-fluid" style="width:75%;">
+<div class="panel-body container-fluid">
 
     <form autocomplete="off" method="post" action="{{URL::to('admin/article/media')}}" enctype="multipart/form-data" >
         @include('master.form_add_post')

@@ -5,7 +5,7 @@
     <div class="site-menubar-body">      
         <div>
           <ul class="site-menu">
-            <li class="site-menu-category">Halaman Admin</li>
+            <li class="site-menu-category">Dashboard</li>
             <li class="site-menu-item">
               <a class="animsition-link" href="{{url('admin/material')}}" data-slug="uikit-buttons">
                 <i class="site-menu-icon wb-file" aria-hidden="true"></i>

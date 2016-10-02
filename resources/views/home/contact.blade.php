@@ -17,23 +17,23 @@
                                 <div class="uk-width-medium-5-10">
                                     <div class="uk-form-row">
                                     <label class="uk-form-label" for="">First Name</label>
-                                        <input name="first_name" type="text" style="width:100%;" placeholder="First Name" required>
+                                        <input name="first_name" type="text" style="width:100%;" placeholder="John" required>
                                     </div>
                                     <br>
                                     <div class="uk-form-row">
                                     <label class="uk-form-label" for="">Email</label>
-                                        <input name="email" type="email" style="width:100%;" placeholder="Enter your Email" required>
+                                        <input name="email" type="email" style="width:100%;" placeholder="john@gmail.com" required>
                                     </div>
                                 </div>
                                 <div class="uk-width-medium-5-10">
                                     <div class="uk-form-row">
                                     <label class="uk-form-label" for="">Last Name</label>
-                                        <input name="last_name" type="text" style="width:100%;" placeholder="Last Name" required>
+                                        <input name="last_name" type="text" style="width:100%;" placeholder="Alexander" required>
                                     </div>
                                     <br>
                                     <div class="uk-form-row">
                                     <label class="uk-form-label" for="">Phone Number</label>
-                                        <input name="phone" type="text" style="width:100%;" placeholder="Phone Number" required>
+                                        <input name="phone" type="text" style="width:100%;" placeholder="+6285xxx" required>
                                     </div>
                                 </div>
                             </div>
@@ -41,7 +41,7 @@
                                 <div class="uk-width-medium-10-10">
                                     <div class="uk-form-row">
                                     <label class="uk-form-label" for="">Subject</label>
-                                        <input name="subject" type="text" style="width:100%;" placeholder="Subject" required>
+                                        <input name="subject" type="text" style="width:100%;" placeholder="" required>
                                     </div>
                                     <br>
                                     <div class="uk-form-row">

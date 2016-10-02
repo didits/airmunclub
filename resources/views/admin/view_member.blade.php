@@ -20,28 +20,6 @@
 <!-- Example Quick Menu Small -->
         
           <ul class="nav-quick nav-quick-sm row">
-            <li class="col-sm-2 col-xs-4">
-           
-            </li>
-            <li class="col-sm-2 col-xs-4">
-            <form>
-            </form>
-
-            </li>
-            <li class="col-sm-2 col-xs-4">
-             
-            </li>
-            <li class="col-sm-2 col-xs-4">
-            
-            </li>
-            <li class="col-sm-1 col-xs-4">
-              
-            </li>
-            <li class="col-sm-3 col-xs-5">
-             <div class="col-md-9">                
-                <button type="button" class="btn btn-block btn-info" onclick="location.href='{{url('admin/article/member/create')}}'">Tambah Artikel</button>
-</div>
-            </li>
           </ul>
         <!-- End Example Quick Menu Small -->
                 
@@ -49,14 +27,14 @@
         <div class="panel-body">
          <!-- Example Bordered Table -->
               <div class="example-wrap"> <!--ganti kolom searching-->
-                
+                <button type="button" class="btn btn-block btn-info" style="width:200px" onclick="location.href='{{url('admin/article/member/create')}}'">Add Member</button>
                 <div class="example table-responsive">
                   <table class="table table-bordered table-striped">
                     <thead>
                       <tr>
                           <th width="5%" class="text-center">No</th>
                           <th>Title</th>
-                          <th >Image</th>
+                          <!-- <th >Image</th> -->
                           <th>Published</th>
                           <th>Last Updated</th>
                           <th class="text-nowrap">Action</th>
@@ -68,7 +46,7 @@
                         <tr>
                             <td class="text-center"><?php echo $i++ ?></td>
                             <td>{{ $art->title }}</td>
-                            <td><img src="{{$art->path}}" style="width:25%"> </td>
+                            <!-- <td><img src="{{$art->path}}" style="width:25%"> </td> -->
                             <td><?php $date = date_create($art->created_at); echo date_format($date, 'jS F Y H:i:s');?></td>
                             <td><?php $date = date_create($art->updated_at); echo date_format($date, 'jS F Y H:i:s');?></td>
                             <td class="text-nowrap">

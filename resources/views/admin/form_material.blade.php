@@ -20,7 +20,7 @@
 
 
 <!-- <div class="panel" style="padding:15px;">            -->
-<div class="panel-body container-fluid" style="width:75%;">
+<div class="panel-body container-fluid">
 
     <form autocomplete="off" method="post" action="{{URL::to('admin/material')}}" enctype="multipart/form-data" >
         {!! csrf_field() !!}
@@ -34,7 +34,7 @@
         <div >
             <br>
             <h4 class="example-title">Description</h4>
-            <textarea style="width: 782px; height: 193px;" type="text" class="form-control" id="inputPlaceholder" placeholder="Description" name="description" required="required"> </textarea>
+            <textarea style="width:100%; height: 193px;" type="text" class="form-control" id="inputPlaceholder" placeholder="Description" name="description" required="required"> </textarea>
             <br>
         </div>
 
@@ -45,10 +45,7 @@
             <br>
         </div>
 
-        <div style="text-align: center">
-            <br>
-            <button type="button submit" class="btn-primary btn">Submit</button>
-        </div>
+            <button type="button submit" class="btn-primary btn" style="width:200px">Submit</button>
 
 
 

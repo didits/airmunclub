@@ -18,26 +18,9 @@
 <!-- Example Quick Menu Small -->
         
           <ul class="nav-quick nav-quick-sm row">
-            <li class="col-sm-2 col-xs-4">
-           
-            </li>
-            <li class="col-sm-2 col-xs-4">
-            <form>
-            </form>
-
-            </li>
-            <li class="col-sm-2 col-xs-4">
-             
-            </li>
-            <li class="col-sm-2 col-xs-4">
-            
-            </li>
-            <li class="col-sm-1 col-xs-4">
-              
-            </li>
             <li class="col-sm-3 col-xs-5">
              <div class="col-md-9">
-                 <button type="button" class="btn btn-block btn-info" onclick="location.href='{{url('admin/mun/international/create')}}'">Tambah Artikel</button>
+                 
 </div>
             </li>
           </ul>
@@ -47,14 +30,13 @@
         <div class="panel-body">
          <!-- Example Bordered Table -->
               <div class="example-wrap"> <!--ganti kolom searching-->
-                
+                <button type="button" style="width:200px" class="btn btn-block btn-info" onclick="location.href='{{url('admin/mun/international/create')}}'">Tambah Artikel</button>
                 <div class="example table-responsive">
                   <table class="table table-bordered table-striped">
                       <thead>
                       <tr>
                           <th width="5%" class="text-center">No</th>
                           <th>Description</th>
-                          <th >Image</th>
                           <th>Last Updated</th>
                           <th class="text-nowrap">Action</th>
                       </tr>
@@ -65,8 +47,7 @@
                       @foreach($mun as $art)
                           <tr>
                               <td class="text-center"><?php echo $i++ ?></td>
-                              <td>{{ substr(nl2br($art->description),0,20)}}</td>
-                              <td><img src="{{$art->path1}}" style="width:25%"><img src="{{$art->path2}}" style="width:25%"><img src="{{$art->path3}}" style="width:25%"> </td>
+                              <td>{{ substr(nl2br($art->description),0,20)}}</td>                        
                               <td><?php $date = date_create($art->updated_at); echo date_format($date, 'jS F Y H:i:s');?></td>
                               <td class="text-nowrap">
                                   <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"

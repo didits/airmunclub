@@ -2,6 +2,12 @@
  <!-- Panel Standard Editor -->
           <div class="panel">
             <div class="panel-heading">
+                        <div >
+  <br>
+  <h4 class="example-title">Title</h4>
+  <input type="text" class="form-control" id="inputPlaceholder" placeholder="Type in here" name="title" required="required">
+  <br>
+</div>
               <h4 class="example-title">Description</h4>
             </div>
             <div >
@@ -17,7 +23,7 @@
                     <input type='hidden' style="" name="path_temp1" value="{{$mun->path1 }}" />
                     <br>
                     <div>
-                        <img id="blah1" src="<?php echo URL::to(substr($mun->path1,6)); ?>" style="margin-left:2%;width:30%" />
+                        <img id="blah1" src="<?php echo URL::to(substr($mun->path1,6)); ?>" style="width:30%" />
                     </div>
                     <br>
                 </div>
@@ -28,7 +34,7 @@
                     <input type='hidden' style="" name="path_temp2" value="{{$mun->path2 }}" />
                     <br>
                     <div>
-                        <img id="blah2" src="<?php echo URL::to(substr($mun->path2,6)); ?>" style="margin-left:2%;width:30%" />
+                        <img id="blah2" src="<?php echo URL::to(substr($mun->path2,6)); ?>" style="width:30%" />
                     </div>
                     <br>
                 </div>
@@ -39,15 +45,12 @@
                     <input type='hidden' style="" name="path_temp3" value="{{$mun->path3 }}" />
                     <br>
                     <div>
-                        <img id="blah3" src="<?php echo URL::to(substr($mun->path3,6)); ?>" style="margin-left:2%;width:30%" />
+                        <img id="blah3" src="<?php echo URL::to(substr($mun->path3,6)); ?>" style="width:30%" />
                     </div>
                     <br>
                 </div>
 
-              <div style="text-align: center">
-                   <br>
-                   <button type="button submit" class="btn-primary btn">Submit</button>
-              </div>
+<button style="width:200px" type="button submit" class="btn-primary btn">Submit</button>
 
 
 

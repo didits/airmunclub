@@ -10,53 +10,53 @@
         <div class="uk-navbar-flip uk-visible-large">
             <ul class="uk-navbar-nav">
                 <li class=" uk-active" >
-                    <a href="">Home</a>
+                    <a href="{{url('home')}}">Home</a>
                 </li>
                 <li>
-                    <a href="">About</a>
+                    <a href="{{url('about')}}">About</a>
                 </li>
                 <li class="uk-parent" data-uk-dropdown>
-                   
-                   <a href="">Activities<i class="uk-icon-caret-down"> </i></a>
-                    <div class="uk-dropdown uk-dropdown-navbar">
-                                        <ul class="uk-nav uk-nav-navbar">
-                                            <li><a href="#">International MUN</a></li>
-                                            <li><a href="#">National MUN</a></li>
-                                            <li><a href="#">Member</a></li>
-                                        </ul>
-                    </div>
-                </li>
-                <li class="uk-parent" data-uk-dropdown>
-                
-                    <a href="">Archive <i class="uk-icon-caret-down"></i></a>
+
+                 <a href="">Activities<i class="uk-icon-caret-down"> </i></a>
+                 <div class="uk-dropdown uk-dropdown-navbar">
+                    <ul class="uk-nav uk-nav-navbar">
+                        <li><a href="#">International MUN</a></li>
+                        <li><a href="#">National MUN</a></li>
+                        <li><a href="#">Member</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="uk-parent" data-uk-dropdown>
+
+                <a href="">Archive <i class="uk-icon-caret-down"></i></a>
                 <div class="uk-dropdown uk-dropdown-navbar">
-                                        <ul class="uk-nav uk-nav-navbar">
-                                            <li><a href="#">Materials</a></li>
-                                            <li><a href="#">Media Coverage</a></li>
-                                            <li><a href="#">Gallery</a></li>
-                                        </ul>
-                    </div>
+                    <ul class="uk-nav uk-nav-navbar">
+                        <li><a href="#">Materials</a></li>
+                        <li><a href="#">Media Coverage</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
+                </div>
                 
-                </li>
-                <li>
-                    <a href="">Events Calender</a>
-                </li>
-                <li>
-                    <a href="">FAQ</a>
-                </li>
-                 
-                <li>
-                    <a href="">Contact Us</a>
-                </li>
+            </li>
+            <li>
+                <a href="">Events Calendar</a>
+            </li>
+            <li>
+            <a href="{{url('faq')}}">FAQ</a>
+            </li>
+
+            <li>
+                <a href="{{url('contact')}}">Contact Us</a>
+            </li>
 
 
-            </ul>
-        </div>
+        </ul>
+    </div>
 
-        <div class="uk-navbar-flip uk-hidden-large">
-            <a href="#offcanvas" class="uk-navbar-toggle" data-uk-offcanvas></a>
-        </div>
+    <div class="uk-navbar-flip uk-hidden-large">
+        <a href="#offcanvas" class="uk-navbar-toggle" data-uk-offcanvas></a>
+    </div>
 
-    </nav>
+</nav>
 
 </div>

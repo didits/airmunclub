@@ -13,12 +13,12 @@
                 <div class="uk-width-medium-1-1">
 
                     <div class="uk-panel ">
-                        
+
                         <div class="uk-width-large-4-4 uk-text-center uk-margin-large">
                             <div class="uk-margin-bottom">
                                 <h1 class="uk-heading-large uk-margin-small-bottom uk-margin-large-top">Airlangga MUN Club</h1>
                             </div>
-                            <a class="uk-button uk-margin-top" href="#">Learn more</a>
+                            <a class="uk-button uk-margin-top" href="{{url('about')}}">Learn more</a>
                         </div>
                     </div>
 

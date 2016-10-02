@@ -7,7 +7,7 @@
   <meta name="description" content="bootstrap admin template">
   <meta name="author" content="">
 
-  <title>Halaman Admin AIRMUNCLUB</title>
+  <title>Admin Airlangga MUN Club</title>
 
   <link rel="apple-touch-icon" href="{{URL::to('aset/images/apple-touch-icon.png')}}">
   <link rel="shortcut icon" href="{{URL::to('aset/images/favicon.ico')}}">
@@ -76,9 +76,8 @@ $(document).ready(function(){
       data-toggle="collapse">
         <i class="icon wb-more-horizontal" aria-hidden="true"></i>
       </button>      
-      <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">        
-        <img class="navbar-brand-logo" src="{{URL::to('assets/img/logo/1.png')}}" width="50" length="50" alt="...">        
-        <span class="navbar-brand-text">Air Mun Club </span>
+      <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">              
+        <span class="navbar-brand-text">Airlangga MUN Club </span>
       </div>
     </div>
 
@@ -96,7 +95,7 @@ $(document).ready(function(){
             </a>
           </li>
           <li>
-              <a>Selamat datang, X
+              <a>Welcome Admin
             </a>
           </li>
                 </ul>
