@@ -28,11 +28,42 @@ class HomeController extends Controller
         return view('home/index');
     }
 
+    public function about()
+    {
+        return view('home/about');
+    }
+
+    public function faq()
+    {
+        return view('home/faq');
+    }
+
+    public function event_calendar()
+    {
+        return view('home/event_calendar');
+    }
+
     public function posting($id)
     {
         $article=Article::where('id', $id)->first();
         // load the view and pass the nerds
         return View::make('home.post')
+            ->with('article', $article);
+    }
+
+    public function member()
+    {
+        $article=Article::where('type', 'member')->orderBy('id','desc')->get();
+        // load the view and pass the nerds
+        return View::make('home.member_page')
+            ->with('article', $article);
+    }
+
+    public function media_coverage()
+    {
+        $article=Article::where('type', 'media')->orderBy('id','desc')->get();
+        // load the view and pass the nerds
+        return View::make('home.media_coverage')
             ->with('article', $article);
     }
 

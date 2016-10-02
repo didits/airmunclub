@@ -38,10 +38,10 @@
                                     <tbody>
                                     @foreach($material as $art)
                                         <tr>
-                                            <td><?php $date = date_create($art->updated_at); echo date_format($date, 'jS F Y H:i:s');?></td>
+                                            <td><?php $date = date_create($art->updated_at); echo date_format($date, 'jS F Y');?></td>
                                             <td>{{ $art->title }}</td>
                                             <td>{{ $art->description}}</td>
-                                        <td><a class="uk-button uk-button-small" style="background-color: #00ABEA ; color: white" type="button" href="http://{{$art->link}}">Link</a> </td>
+                                        <td><a class="uk-button uk-button-small" style="background-color: #00ABEA ; color: white" type="button" href="{{$art->link}}">Link</a> </td>
                                     
                                         </tr>
                                     @endforeach

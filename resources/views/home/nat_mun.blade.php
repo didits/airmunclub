@@ -31,7 +31,7 @@
                     <div class="uk-panel  uk-text-center uk-width-large-3-4 uk-container-center">
 
                         
-                        <p class="uk-text-large">{{$mun->description}}</p>
+                        <p class="uk-text-large">{{print_r($mun->description)}}</p>
 
                     </div>
 

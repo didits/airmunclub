@@ -34,7 +34,7 @@
 
                         <p><img src="{{$article->path}}" width="900" height="300" alt=""></p>
                         <br>
-                        {{ $article->description }}
+                        {{ print_r($article->description) }}
 
                     </article>
                     <!-- Go to www.addthis.com/dashboard to customize your tools -->

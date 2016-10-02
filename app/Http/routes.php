@@ -42,39 +42,22 @@ Route::get('/int_mun/{id}', 'HomeController@intmun');
 
 Route::get('/contact', 'HomeController@contact');
 
-Route::post('/contact_submit', 'HomeController@contact_submit'); 
+Route::post('/contact_submit', 'HomeController@contact_submit');
 
+Route::get('/', 'HomeController@index');
 
-Route::get('/', function () {
-	return view('home/index');
-});
+Route::get('/about', 'HomeController@about');
 
-Route::get('/about', function () {
-	return view('home/about');
-});
+Route::get('/faq', 'HomeController@faq');
 
+Route::get('/event_calendar', 'HomeController@event_calendar');
 
-Route::get('/faq',function(){
-	return view('home/faq');
-});
+Route::get('/member', 'HomeController@member');
 
-Route::get('/event_calendar',function(){
-	return view('home/event_calendar');
-});
+Route::get('/media_coverage', 'HomeController@media_coverage');
 
 Route::get('/gallery',function(){
 	return view('home/gallery');
-});
-
-Route::get('/post',function(){
-	return view('home/post');
-});
-
-Route::get('/member', function () {
-	return view('home/member_page');
-});
-Route::get('/media_coverage', function () {
-	return view('home/media_coverage');
 });
 
 

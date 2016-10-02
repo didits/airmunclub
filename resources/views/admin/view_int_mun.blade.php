@@ -47,7 +47,7 @@
                       @foreach($mun as $art)
                           <tr>
                               <td class="text-center"><?php echo $i++ ?></td>
-                              <td>{{ substr(nl2br($art->description),0,20)}}</td>                        
+                              <td>{{ substr(nl2br($art->description),0,20).'...'}}</td>
                               <td><?php $date = date_create($art->updated_at); echo date_format($date, 'jS F Y H:i:s');?></td>
                               <td class="text-nowrap">
                                   <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"
