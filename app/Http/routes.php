@@ -42,7 +42,7 @@ Route::get('/int_mun/{id}', 'HomeController@intmun');
 
 Route::get('/contact', 'HomeController@contact');
 
-Route::post('/contact_submit', 'HomeController@contact_submit');
+Route::post('/contact_submit', 'HomeController@contact_submit'); 
 
 
 Route::get('/', function () {
@@ -70,7 +70,7 @@ Route::get('/post',function(){
 	return view('home/post');
 });
 
-Route::get('/member_page', function () {
+Route::get('/member', function () {
 	return view('home/member_page');
 });
 Route::get('/media_coverage', function () {

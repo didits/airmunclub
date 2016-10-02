@@ -25,7 +25,6 @@
 
          <div id="tm-main" class="tm-main uk-block uk-block-default">
             <article class="uk-article">
-<button class="uk-button uk-button-mini uk-button-link uk-button-primary" type="button">Mini button</button>
                             <div class="uk-overflow-container">
                                 <table class="uk-table uk-table-hover  uk-table-striped uk-table-condensed">
                                     <thead class="uk-text-bold">
@@ -42,7 +41,7 @@
                                             <td><?php $date = date_create($art->updated_at); echo date_format($date, 'jS F Y H:i:s');?></td>
                                             <td>{{ $art->title }}</td>
                                             <td>{{ $art->description}}</td>
-                                        <td><a class="uk-button uk-button-small uk-button-link" style="background-color: #00ABEA ; color: white" type="button" href="http://{{$art->link}}">Link</a> </td>
+                                        <td><a class="uk-button uk-button-small" style="background-color: #00ABEA ; color: white" type="button" href="http://{{$art->link}}">Link</a> </td>
                                     
                                         </tr>
                                     @endforeach

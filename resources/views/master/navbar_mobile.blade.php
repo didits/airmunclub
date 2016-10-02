@@ -21,7 +21,7 @@
                                 <ul class="uk-nav uk-nav-navbar">
                                     <li><a href="#">International MUN</a></li>
                                     <li><a href="#">National MUN</a></li>
-                                    <li><a href="#">Member</a></li>
+                                    <li><a href="{{url('member')}}">Member</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -30,15 +30,15 @@
                             <a href="">Archive <i class="uk-icon-caret-down"></i></a>
                             <div class="uk-dropdown uk-dropdown-navbar">
                                 <ul class="uk-nav uk-nav-navbar">
-                                    <li><a href="#">Materials</a></li>
-                                    <li><a href="#">Media Coverage</a></li>
-                                    <li><a href="#">Gallery</a></li>
+                                    <li><a href="{{url('material')}}">Materials</a></li>
+                                    <li><a href="{{url('media_coverage')}}">Media Coverage</a></li>
+                                    <li><a href="{{url('gallery')}}">Gallery</a></li>
                                 </ul>
                             </div>
 
                         </li>
                         <li>
-                            <a href="">Events Calendar</a>
+                            <a href="{{url('event_calendar')}}">Events Calendar</a>
                         </li>
                         <li>
                             <a href="{{url('faq')}}">FAQ</a>
