@@ -2,39 +2,35 @@
                     <div class="uk-offcanvas-bar uk-offcanvas-bar-flip uk-text-center">
 
                         <div class="uk-panel uk-text-center">
-                            <a href="/demo/theme-brick/"> 
+                            <a href="{{url('/')}}"> 
                                 <img src="{{URL::to('assets/img/logo/bw.png')}}" alt="">
                             </a>
                         </div>
 
-                        <ul class="uk-nav uk-nav-offcanvas">
+                        <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
                             <li class=" uk-active" >
                                 <a href="{{url('home')}}">Home</a>
                             </li>
                             <li>
                                 <a href="{{url('about')}}">About</a>
                             </li>
-                            <li class="uk-parent" data-uk-dropdown>
-
-                               <a href="">Activities<i class="uk-icon-caret-down"> </i></a>
-                               <div class="uk-dropdown uk-dropdown-navbar">
-                                <ul class="uk-nav uk-nav-navbar">
-                                    <li><a href="#">International MUN</a></li>
-                                    <li><a href="#">National MUN</a></li>
-                                    <li><a href="{{url('member')}}">Member</a></li>
+                            <li class="uk-parent">
+                               <a href="#">Activities</a>
+                                <ul class="uk-nav-sub">
+                                    <li><a href="#">INTERNATIONAL MUN</a></li>
+                                    <li><a href="#">NATIONAL MUN</a></li>
+                                    <li><a href="{{url('member')}}">MEMBER</a></li>
                                 </ul>
-                            </div>
-                        </li>
+                            </li>
+
                         <li class="uk-parent" data-uk-dropdown>
 
-                            <a href="">Archive <i class="uk-icon-caret-down"></i></a>
-                            <div class="uk-dropdown uk-dropdown-navbar">
-                                <ul class="uk-nav uk-nav-navbar">
-                                    <li><a href="{{url('material')}}">Materials</a></li>
-                                    <li><a href="{{url('media_coverage')}}">Media Coverage</a></li>
-                                    <li><a href="{{url('gallery')}}">Gallery</a></li>
+                            <a href="#">Archive</a>
+                                <ul class="uk-nav-sub">
+                                    <li><a href="{{url('material')}}">MATERIALS</a></li>
+                                    <li><a href="{{url('media_coverage')}}">MEDIA COVERAGE</a></li>
+                                    <li><a href="{{url('gallery')}}">GALLERY</a></li>
                                 </ul>
-                            </div>
 
                         </li>
                         <li>

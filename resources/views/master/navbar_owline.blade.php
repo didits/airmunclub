@@ -17,7 +17,7 @@
                 </li>
                 <li class="uk-parent" data-uk-dropdown>
 
-                 <a href="">Activities<i class="uk-icon-caret-down"> </i></a>
+                 <a href="">Activities <i class="uk-icon-caret-down"></i></a>
                  <div class="uk-dropdown uk-dropdown-navbar">
                     <ul class="uk-nav uk-nav-navbar">
                         <li><a href="#">International MUN</a></li>
