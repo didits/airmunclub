@@ -71,6 +71,7 @@ Route::group(['middleware' => 'auth','prefix' => 'admin'], function () {
 	Route::resource('mun/international', 'IntMunController');
 
 	Route::get('contact', 'AdminController@contact');
+	Route::get('gallery', 'AdminController@gallery');
 });
 
 

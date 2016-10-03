@@ -40,4 +40,12 @@ class AdminController extends Controller
             ->with('contact', $contact);
     }
 
+    public function gallery()
+    {
+        // get all the nerds
+
+        // load the view and pass the nerds
+        return View::make('admin.view_gallery');
+    }
+
 }
