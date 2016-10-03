@@ -1,4 +1,4 @@
-<div class="tm-navbar" data-uk-sticky='{"media":767,"showup":true,"animation":"uk-animation-slide-top"}'>
+<div class="tm-navbar" data-uk-sticky='{"media":767,"showup":true,"animation":"uk-animation-slide-top"}' style="border-bottom:1px solid #ccc">
 
     <nav class="uk-navbar">
 
@@ -16,12 +16,25 @@
                     <a href="{{url('about')}}">About</a>
                 </li>
                 <li class="uk-parent" data-uk-dropdown>
-
-                 <a href="">Activities <i class="uk-icon-caret-down"></i></a>
+                 <a href="#">Activities <i class="uk-icon-caret-down"></i></a>
                  <div class="uk-dropdown uk-dropdown-navbar">
                     <ul class="uk-nav uk-nav-navbar">
-                        <li><a href="#">International MUN</a></li>
-                        <li><a href="#">National MUN</a></li>
+                        <li class="uk-parent">
+                            <a href="#">International MUN <i class="uk-icon-caret-down"></i></a>
+                                <ul class="uk-nav uk-nav-navbar">
+                                    <li><a href="#">- HNMUN</a></li>
+                                    <li><a href="#">- WMUN</a></li>
+                                    <li><a href="#">- AMUMUN</a></li>
+                                </ul>  
+                        </li>
+                        <li class="uk-parent">
+                            <a href="#">National MUN <i class="uk-icon-caret-down"></i></a>
+                            <ul class="uk-nav uk-nav-navbar">
+                                    <li><a href="#">- HNMUN</a></li>
+                                    <li><a href="#">- WMUN</a></li>
+                                    <li><a href="#">- AMUMUN</a></li>
+                                </ul>
+                        </li>
                         <li><a href="{{url('member')}}">Member</a></li>
                     </ul>
                 </div>
@@ -42,7 +55,7 @@
                 <a href="{{url('event_calendar')}}">Events Calendar</a>
             </li>
             <li>
-            <a href="{{url('faq')}}">FAQ</a>
+                <a href="{{url('faq')}}">FAQ</a>
             </li>
 
             <li>

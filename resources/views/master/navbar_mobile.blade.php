@@ -14,7 +14,7 @@
                             <li>
                                 <a href="{{url('about')}}">About</a>
                             </li>
-                            <li class="uk-parent">
+                            <li class="uk-parent" data-uk-dropdown>
                                <a href="#">Activities</a>
                                 <ul class="uk-nav-sub">
                                     <li><a href="#">INTERNATIONAL MUN</a></li>

@@ -89,7 +89,7 @@ class HomeController extends Controller
     {
         $mun=Mun::where('id', $id)->first();
         // load the view and pass the nerds
-        return View::make('home.int_mun')
+        return View::make('home.nat_mun')
             ->with('mun', $mun);
     }
 

@@ -18,20 +18,24 @@
                                     <div class="uk-form-row">
                                     <label class="uk-form-label" for="">First Name</label>
                                         <input name="first_name" type="text" style="width:100%;" placeholder="John" required>
-                                    </div>
-                                    <br>
-                                    <div class="uk-form-row">
+                                    </div>                                    
+                                </div>
+                                <div class="uk-width-medium-5-10">
+                                <div class="uk-form-row">
                                     <label class="uk-form-label" for="">Email</label>
                                         <input name="email" type="email" style="width:100%;" placeholder="john@gmail.com" required>
                                     </div>
                                 </div>
+                                </div>
+                                <div class="uk-grid">
                                 <div class="uk-width-medium-5-10">
                                     <div class="uk-form-row">
                                     <label class="uk-form-label" for="">Last Name</label>
                                         <input name="last_name" type="text" style="width:100%;" placeholder="Alexander" required>
-                                    </div>
-                                    <br>
-                                    <div class="uk-form-row">
+                                    </div>                                    
+                                </div>
+                                <div class="uk-width-medium-5-10">
+                                <div class="uk-form-row">
                                     <label class="uk-form-label" for="">Phone Number</label>
                                         <input name="phone" type="text" style="width:100%;" placeholder="+6285xxx" required>
                                     </div>
@@ -43,7 +47,6 @@
                                     <label class="uk-form-label" for="">Subject</label>
                                         <input name="subject" type="text" style="width:100%;" placeholder="" required>
                                     </div>
-                                    <br>
                                     <div class="uk-form-row">
                                     <label class="uk-form-label" for="">Your Message</label>
                                         <textarea name="message" style="width:100%" required></textarea>
