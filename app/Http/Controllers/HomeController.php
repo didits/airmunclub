@@ -54,6 +54,7 @@ class HomeController extends Controller
     public function member()
     {
         $article=Article::where('type', 'member')->orderBy('id','desc')->get();
+        $article->judul = "Member Page";
         // load the view and pass the nerds
         return View::make('home.member_page')
             ->with('article', $article);
@@ -62,8 +63,9 @@ class HomeController extends Controller
     public function media_coverage()
     {
         $article=Article::where('type', 'media')->orderBy('id','desc')->get();
+        $article->judul = "Media Coverage";
         // load the view and pass the nerds
-        return View::make('home.media_coverage')
+        return View::make('home.member_page')
             ->with('article', $article);
     }
 

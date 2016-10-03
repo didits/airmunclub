@@ -41,7 +41,7 @@
         <div >
             <br>
             <h4 class="example-title">Link</h4>
-            <input type="link" class="form-control" id="inputPlaceholder" placeholder="Link" name="link" required="required">
+            <input type="link" class="form-control" id="inputPlaceholder" placeholder="http://" name="link" required="required">
             <br>
         </div>
 
