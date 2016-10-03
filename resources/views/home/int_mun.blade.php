@@ -43,7 +43,7 @@
 
                         
                         <p class="uk-text-large">Apply now!</p>
-                        <p><button class="uk-button" type="button submit">Apply</button></p> 
+                        <p><a href="{{$mun->link}}"><button style="width:200px" class="uk-button" type="button submit">Apply</button></a></p>
 
                     </div>
 

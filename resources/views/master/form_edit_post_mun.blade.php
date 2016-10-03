@@ -4,10 +4,6 @@
             <div class="panel-heading">
                         <div >
   <br>
-  <h4 class="example-title">Title</h4>
-  <input type="text" class="form-control" id="inputPlaceholder" placeholder="Type in here" name="title" required="required">
-  <br>
-</div>
               <h4 class="example-title">Description</h4>
             </div>
             <div >
@@ -16,7 +12,14 @@
           </div>
           <!-- End Panel Standard Editor -->
 
-                <div >
+              <div >
+                  <br>
+                  <h4 class="example-title">Link</h4>
+                  <input type="link" class="form-control" id="inputPlaceholder" placeholder="Link" value="{{ $mun->link}}" name="link" required="required">
+                  <br>
+              </div>
+
+              <div >
                     <br>
                     <h4 class="example-title">Image 1</h4>
                     <input type='file'  id="path1" style="" name="path1" value="<?php echo URL::to(substr($mun->path1,6)); ?>" />

@@ -6,8 +6,9 @@
 @section('content')
 <div class="uk-container uk-container-center">
     <div class="tm-container">
-        @include('master.navbar_owline')                               
-        
+        @include('master.navbar_owline')
+
+
         <div id="tm-hero" class="uk-contrast" >
             <section class="uk-grid uk-grid-match" data-uk-grid-margin>
                 <div class="uk-width-medium-1-1">
@@ -34,158 +35,26 @@
     
     <div class="uk-grid uk-grid-small uk-grid-width-medium-1-3 uk-margin-large" data-uk-grid-margin>
 
-    <div>
-        <div class="uk-panel">
-            <div class="uk-overlay uk-overlay-hover" data-uk-modal="{target:'#home-5'}" >
-                <img src="{{URL::to('assets/img/home/city.jpg')}}" alt="Home 03">
-                <div class="uk-overlay-panel uk-overlay-icon uk-overlay-background uk-overlay-fade"></div>
-                <a class="uk-position-cover" href="#" data-uk-lightbox=""></a>
+    @foreach($gallery as $list)
+            <div>
+                <div class="uk-panel">
+                    <div class="uk-overlay uk-overlay-hover" data-uk-modal="{target:'#home-{{$list->id}}'}" >
+                        <img src="{{$list->path}}" alt="Home 03">
+                        <div class="uk-overlay-panel uk-overlay-icon uk-overlay-background uk-overlay-fade"></div>
+                        <a class="uk-position-cover" href="#" data-uk-lightbox=""></a>
+                    </div>
+
+                    <div id="home-{{$list->id}}" class="uk-modal">
+                        <div class="uk-modal-dialog uk-modal-dialog-lightbox">
+                            <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
+                            <img width="600" height="400" src="{{$list->path}}">
+                        </div>
+                    </div>
+                </div>
             </div>
 
-             <div id="home-5" class="uk-modal">
-                 <div class="uk-modal-dialog uk-modal-dialog-lightbox">
-                 <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
-                 <img width="600" height="400" src="{{URL::to('assets/img/home/city.jpg')}}">
-                 </div>
-            </div>
-        </div>
+    @endforeach
     </div>
-
-    <div>
-               <div class="uk-panel">
-            <div class="uk-overlay uk-overlay-hover" data-uk-modal="{target:'#home-5'}" >
-                <img src="{{URL::to('assets/img/home/city.jpg')}}" alt="Home 03">
-                <div class="uk-overlay-panel uk-overlay-icon uk-overlay-background uk-overlay-fade"></div>
-                <a class="uk-position-cover" href="#" data-uk-lightbox=""></a>
-            </div>
-
-             <div id="home-5" class="uk-modal">
-                 <div class="uk-modal-dialog uk-modal-dialog-lightbox">
-                 <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
-                 <img width="600" height="400" src="{{URL::to('assets/img/home/city.jpg')}}">
-                 </div>
-            </div>
-        </div>
-    </div>
-
-        <div>
-        <div class="uk-panel">
-            <div class="uk-overlay uk-overlay-hover" data-uk-modal="{target:'#home-5'}" >
-                <img src="{{URL::to('assets/img/home/city.jpg')}}" alt="Home 03">
-                <div class="uk-overlay-panel uk-overlay-icon uk-overlay-background uk-overlay-fade"></div>
-                <a class="uk-position-cover" href="#" data-uk-lightbox=""></a>
-            </div>
-
-             <div id="home-5" class="uk-modal">
-                 <div class="uk-modal-dialog uk-modal-dialog-lightbox">
-                 <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
-                 <img width="600" height="400" src="{{URL::to('assets/img/home/city.jpg')}}">
-                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div>
-               <div class="uk-panel">
-            <div class="uk-overlay uk-overlay-hover" data-uk-modal="{target:'#home-5'}" >
-                <img src="{{URL::to('assets/img/home/city.jpg')}}" alt="Home 03">
-                <div class="uk-overlay-panel uk-overlay-icon uk-overlay-background uk-overlay-fade"></div>
-                <a class="uk-position-cover" href="#" data-uk-lightbox=""></a>
-            </div>
-
-             <div id="home-5" class="uk-modal">
-                 <div class="uk-modal-dialog uk-modal-dialog-lightbox">
-                 <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
-                 <img width="600" height="400" src="{{URL::to('assets/img/home/city.jpg')}}">
-                 </div>
-            </div>
-        </div>
-    </div>
-        <div>
-               <div class="uk-panel">
-            <div class="uk-overlay uk-overlay-hover" data-uk-modal="{target:'#home-5'}" >
-                <img src="{{URL::to('assets/img/home/city.jpg')}}" alt="Home 03">
-                <div class="uk-overlay-panel uk-overlay-icon uk-overlay-background uk-overlay-fade"></div>
-                <a class="uk-position-cover" href="#" data-uk-lightbox=""></a>
-            </div>
-
-             <div id="home-5" class="uk-modal">
-                 <div class="uk-modal-dialog uk-modal-dialog-lightbox">
-                 <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
-                 <img width="600" height="400" src="{{URL::to('assets/img/home/city.jpg')}}">
-                 </div>
-            </div>
-        </div>
-    </div>
-        <div>
-               <div class="uk-panel">
-            <div class="uk-overlay uk-overlay-hover" data-uk-modal="{target:'#home-5'}" >
-                <img src="{{URL::to('assets/img/home/city.jpg')}}" alt="Home 03">
-                <div class="uk-overlay-panel uk-overlay-icon uk-overlay-background uk-overlay-fade"></div>
-                <a class="uk-position-cover" href="#" data-uk-lightbox=""></a>
-            </div>
-
-             <div id="home-5" class="uk-modal">
-                 <div class="uk-modal-dialog uk-modal-dialog-lightbox">
-                 <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
-                 <img width="600" height="400" src="{{URL::to('assets/img/home/city.jpg')}}">
-                 </div>
-            </div>
-        </div>
-    </div>
-    <div>
-        <div class="uk-panel">
-            <div class="uk-overlay uk-overlay-hover" data-uk-modal="{target:'#home-5'}" >
-                <img src="{{URL::to('assets/img/home/city.jpg')}}" alt="Home 03">
-                <div class="uk-overlay-panel uk-overlay-icon uk-overlay-background uk-overlay-fade"></div>
-                <a class="uk-position-cover" href="#" data-uk-lightbox=""></a>
-            </div>
-
-             <div id="home-5" class="uk-modal">
-                 <div class="uk-modal-dialog uk-modal-dialog-lightbox">
-                 <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
-                 <img width="600" height="400" src="{{URL::to('assets/img/home/city.jpg')}}">
-                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div>
-               <div class="uk-panel">
-            <div class="uk-overlay uk-overlay-hover" data-uk-modal="{target:'#home-5'}" >
-                <img src="{{URL::to('assets/img/home/city.jpg')}}" alt="Home 03">
-                <div class="uk-overlay-panel uk-overlay-icon uk-overlay-background uk-overlay-fade"></div>
-                <a class="uk-position-cover" href="#" data-uk-lightbox=""></a>
-            </div>
-
-             <div id="home-5" class="uk-modal">
-                 <div class="uk-modal-dialog uk-modal-dialog-lightbox">
-                 <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
-                 <img width="600" height="400" src="{{URL::to('assets/img/home/city.jpg')}}">
-                 </div>
-            </div>
-        </div>
-    </div>
-
-        <div>
-        <div class="uk-panel">
-            <div class="uk-overlay uk-overlay-hover" data-uk-modal="{target:'#home-5'}" >
-                <img src="{{URL::to('assets/img/home/city.jpg')}}" alt="Home 03">
-                <div class="uk-overlay-panel uk-overlay-icon uk-overlay-background uk-overlay-fade"></div>
-                <a class="uk-position-cover" href="#" data-uk-lightbox=""></a>
-            </div>
-
-             <div id="home-5" class="uk-modal">
-                 <div class="uk-modal-dialog uk-modal-dialog-lightbox">
-                 <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
-                 <img width="600" height="400" src="{{URL::to('assets/img/home/city.jpg')}}">
-                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div>
-
            
 </article>
 </main>

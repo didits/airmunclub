@@ -13,7 +13,7 @@ class Mun extends Model
     public $timestamps = true;
 
     protected $fillable = [
-        'description', 'type','id_author','path1','path2','path3'
+        'description', 'type','link','id_author','path1','path2','path3'
     ];
 
 }

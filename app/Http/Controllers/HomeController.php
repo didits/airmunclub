@@ -8,6 +8,7 @@ use App\Article;
 use App\Material;
 use App\Mun;
 use App\Contact;
+use App\Img;
 use Illuminate\Support\Facades\View;
 
 class HomeController extends Controller
@@ -114,6 +115,15 @@ class HomeController extends Controller
 
     }
 
+    public function gallery(){
+
+        // get all the nerds
+        $gallery = Img::where('type','gallery')->orderBy('id','desc')->get();
+
+        // load the view and pass the nerds
+        return View::make('home.gallery')
+            ->with('gallery', $gallery);
+    }
 
 
 }

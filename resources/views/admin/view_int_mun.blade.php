@@ -37,6 +37,7 @@
                       <tr>
                           <th width="5%" class="text-center">No</th>
                           <th>Description</th>
+                          <th>Link</th>
                           <th>Last Updated</th>
                           <th class="text-nowrap">Action</th>
                       </tr>
@@ -48,6 +49,7 @@
                           <tr>
                               <td class="text-center"><?php echo $i++ ?></td>
                               <td>{{ substr(nl2br($art->description),0,20).'...'}}</td>
+                              <td><a href="{{$art->link}}">{{ $art->link}}</a></td>
                               <td><?php $date = date_create($art->updated_at); echo date_format($date, 'jS F Y H:i:s');?></td>
                               <td class="text-nowrap">
                                   <button type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="tooltip"

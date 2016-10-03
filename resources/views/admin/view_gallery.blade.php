@@ -35,37 +35,43 @@
                       </tr>
                     </thead>
                     <tbody>
+                        <?php $i=1;?>
+                        @foreach($gallery as $list)
                         <tr>
-                            <td class="text-center">1</td>
-                            <td></td>
-                            <td></td>
+                            <td class="text-center">{{$i++}}</td>
+                            <td><img src="{{$list->path}}" style="width:25%"></td>
+                            <td><?php $date = date_create($list->updated_at); echo date_format($date, 'jS F Y H:i:s');?></td>
                             <td class="text-nowrap">
-                                <button id="delete" data-id="" type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="modal"
+                                <button id="delete" data-id="{{$list->id}}" type="button" class="btn btn-sm btn-icon btn-flat btn-default" data-toggle="modal"
                                         data-original-title="Delete" data-target="#myModal">
                                     <i class="icon wb-close" aria-hidden="true"></i>
                                 </button>
                             </td>
 
                         </tr>
+                        @endforeach
                     </tbody>
                   </table>
                 </div>
                 <div >
               <br>
-            <h4 class="example-title">Add Picture</h4>
-            <input type='file' id="path3" style="" name="path3" />
+            <form method="POST" action="{{URL::to('admin/gallery/create')}}" enctype="multipart/form-data">
+            {{ csrf_field() }}
+                <h4 class="example-title">Add Picture</h4>
+            <input type='file' id="path" style="" name="path" />
             <br>
             <div>
-              <img id="blah3" src="{{URL::to('assets/img/blank.png')}}" alt="your image" style="width:30%" />
+              <img id="blah" src="{{URL::to('assets/img/blank.png')}}" alt="your image" style="width:30%" />
             </div>
             <br>
-          </div>
+          <div>
           <button style="width:200px" type="button submit" class="btn-primary btn">Submit</button>
               </div>
-             
+            </form>
         </div>
       </div>
     </div>
+   </div>
 
 <!-- Modal HTML -->
 <div id="myModal" class="modal fade">
@@ -76,7 +82,7 @@
                 <h4 class="modal-title">Confirmation</h4>
             </div>
 
-            <form id="formID" method="POST">
+            <form id="formID" method="POST" action="{{URL::to('admin/gallery/destroy')}}">
                 {!! csrf_field() !!}
                 <input type="hidden" name="_method" value="DELETE">
                 <div class="modal-body">
@@ -85,7 +91,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button id="submit" class="btn btn-primary">Save changes</button>
+                    <button type="submit" id="submit" class="btn btn-primary">Save changes</button>
                 </div>
             </form>
         </div>
@@ -142,7 +148,26 @@
     $(document).ready(function(){
         $(document).on("click", "#delete", function() {
             id = $(this).data('id');
-            $('#formID').attr('action', 'national/'+id);
+            $('#formID').attr('action', 'gallery/destroy/'+id);
         });
+    });
+</script>
+<script>
+    function readURL(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah').attr('src', e.target.result);
+                $('#blah').attr('width', "50%");
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#path").change(function(){
+        readURL(this);
     });
 </script>

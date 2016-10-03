@@ -29,7 +29,7 @@
                                 <ul class="uk-nav-sub">
                                     <li><a href="{{url('material')}}">MATERIALS</a></li>
                                     <li><a href="{{url('media_coverage')}}">MEDIA COVERAGE</a></li>
-                                    <li><a href="{{url('gallery')}}">GALLERY</a></li>
+                                    <li><a href="{{url('galery')}}">GALLERY</a></li>
                                 </ul>
 
                         </li>

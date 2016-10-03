@@ -16,6 +16,7 @@ class CreateTableMun extends Migration
             $table->increments('id');
             $table->text('description');
             $table->string('type');
+            $table->string('link');
             $table->integer('id_author');
             $table->string('path1');
             $table->string('path2');

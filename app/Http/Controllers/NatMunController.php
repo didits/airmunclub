@@ -192,6 +192,7 @@ class NatMunController extends Controller
             'path2' => $target_file_final2,
             'path3' => $target_file_final3,
             'id_author' => Auth::user()->id,
+            'link' => $data['link'],
             'type' => $data['type']
         ));
         return redirect('admin/mun/national');
@@ -382,6 +383,7 @@ class NatMunController extends Controller
         Mun::where('id', $id)->update(array(
             'description' => $data['description'],
             'id_author' => Auth::user()->id,
+            'link' => $data['link'],
             'type' => $data['type']
         ));
 

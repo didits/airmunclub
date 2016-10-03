@@ -56,9 +56,7 @@ Route::get('/member', 'HomeController@member');
 
 Route::get('/media_coverage', 'HomeController@media_coverage');
 
-Route::get('/gallery',function(){
-	return view('home/gallery');
-});
+Route::get('/galery', 'HomeController@gallery');
 
 
 //ADMIN
@@ -72,6 +70,10 @@ Route::group(['middleware' => 'auth','prefix' => 'admin'], function () {
 
 	Route::get('contact', 'AdminController@contact');
 	Route::get('gallery', 'AdminController@gallery');
+	Route::post('gallery/create', 'AdminController@galleryCreate');
+	Route::delete('gallery/destroy/{id}', 'AdminController@galleryDelete');
+
+
 });
 
 
