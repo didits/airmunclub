@@ -56,7 +56,7 @@ Route::get('/member', 'HomeController@member');
 
 Route::get('/media_coverage', 'HomeController@media_coverage');
 
-Route::get('/galery', 'HomeController@gallery');
+Route::get('/gallery', 'HomeController@gallery');
 
 
 //ADMIN
