@@ -20,8 +20,8 @@ $this->post('admin/login', 'Auth\AuthController@login');
 $this->get('admin/logout', 'Auth\AuthController@logout');
 
 // Registration Routes...
-$this->get('admin/register', 'Auth\AuthController@showRegistrationForm');
-$this->post('admin/register', 'Auth\AuthController@register');
+//$this->get('admin/register', 'Auth\AuthController@showRegistrationForm');
+//$this->post('admin/register', 'Auth\AuthController@register');
 
 //// Password Reset Routes...
 //$this->get('admin/password/reset/{token?}', 'Auth\PasswordController@showResetForm');
